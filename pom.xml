@@ -12,6 +12,7 @@
         <module>modular-gwt-shared</module>
         <module>modular-gwt-client</module>
         <module>modular-gwt-server</module>
+        <module>modular-gwt-client-component</module>
     </modules>
     <name>modular-gwt</name>
 

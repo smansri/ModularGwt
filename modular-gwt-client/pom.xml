@@ -59,6 +59,11 @@
             <artifactId>gxt</artifactId>
             <version>${gxt.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>modular-gwt-client-component</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
