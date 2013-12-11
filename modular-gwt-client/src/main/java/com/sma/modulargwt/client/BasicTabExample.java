@@ -9,10 +9,11 @@ import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.widget.core.client.PlainTabPanel;
 import com.sencha.gxt.widget.core.client.TabItemConfig;
 import com.sencha.gxt.widget.core.client.TabPanel;
+import com.sencha.gxt.widget.core.client.container.CenterLayoutContainer;
 import com.sencha.gxt.widget.core.client.container.FlowLayoutContainer;
 import com.sencha.gxt.widget.core.client.info.Info;
 
-public class BasicTabExample extends FlowLayoutContainer {
+public class BasicTabExample extends CenterLayoutContainer {
 
     public BasicTabExample() {
         VerticalPanel vp = new VerticalPanel();
@@ -31,7 +32,7 @@ public class BasicTabExample extends FlowLayoutContainer {
 
         TabPanel folder = new TabPanel();
         folder.addSelectionHandler(handler);
-        folder.setWidth(450);
+        folder.setWidth(1000);
 
         HTML shortText = new HTML(txt);
         shortText.addStyleName("pad-text");
@@ -42,7 +43,7 @@ public class BasicTabExample extends FlowLayoutContainer {
         folder.add(longText, "Long Text");
 
         final PlainTabPanel panel = new PlainTabPanel();
-        panel.setPixelSize(450, 250);
+        panel.setPixelSize(1000, 500);
         panel.addSelectionHandler(handler);
 
         Label normal = new Label("Just a plain old tab");
