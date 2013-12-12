@@ -21,3 +21,5 @@ war/WEB-INF/classes/
 target
 META-INF
 *.classpath
+.idea
+*iml
