@@ -21,6 +21,10 @@
             <artifactId>modular-gwt-shared</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+        </dependency>
     </dependencies>
 
     <!--<build>

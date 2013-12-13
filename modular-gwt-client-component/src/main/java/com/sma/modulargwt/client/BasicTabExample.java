@@ -10,10 +10,13 @@ import com.sencha.gxt.widget.core.client.PlainTabPanel;
 import com.sencha.gxt.widget.core.client.TabItemConfig;
 import com.sencha.gxt.widget.core.client.TabPanel;
 import com.sencha.gxt.widget.core.client.container.CenterLayoutContainer;
-import com.sencha.gxt.widget.core.client.container.FlowLayoutContainer;
 import com.sencha.gxt.widget.core.client.info.Info;
 
 public class BasicTabExample extends CenterLayoutContainer {
+
+    public TabPanel folder;
+
+    PlainTabPanel panel;
 
     public BasicTabExample() {
         VerticalPanel vp = new VerticalPanel();
@@ -23,14 +26,14 @@ public class BasicTabExample extends CenterLayoutContainer {
 
         SelectionHandler<Widget> handler = new SelectionHandler<Widget>() {
             public void onSelection(SelectionEvent<Widget> event) {
-                TabPanel panel = (TabPanel) event.getSource();
+                TabPanel panel = (TabPanel ) event.getSource();
                 Widget w = event.getSelectedItem();
                 TabItemConfig config = panel.getConfig(w);
                 Info.display("Message", "'" + config.getText() + "' Selected");
             }
         };
 
-        TabPanel folder = new TabPanel();
+        folder = new TabPanel();
         folder.addSelectionHandler(handler);
         folder.setWidth(1000);
 
@@ -42,7 +45,7 @@ public class BasicTabExample extends CenterLayoutContainer {
         longText.addStyleName("pad-text");
         folder.add(longText, "Long Text");
 
-        final PlainTabPanel panel = new PlainTabPanel();
+        panel = new PlainTabPanel();
         panel.setPixelSize(1000, 500);
         panel.addSelectionHandler(handler);
 
